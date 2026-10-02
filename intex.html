@@ -1,0 +1,1580 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090d24">
+
+<title>Happy Boyfriend's Day, Abhinav! 💗</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Great+Vibes&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =====================================
+   GLOBAL STYLES
+===================================== */
+
+:root {
+    --pink: #ffb6d5;
+    --soft-pink: #ff8fc7;
+    --lavender: #cbb9ff;
+    --blue: #91d9ff;
+    --white: #fff6fc;
+    --night: #090d24;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    color: var(--white);
+    background: var(--night);
+    overflow-x: hidden;
+}
+
+/* =====================================
+   GALAXY BACKGROUND
+===================================== */
+
+.galaxy {
+    position: fixed;
+    inset: 0;
+    z-index: -5;
+    background:
+        radial-gradient(ellipse at 20% 20%, #38245e 0%, transparent 45%),
+        radial-gradient(ellipse at 80% 30%, #142d57 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 80%, #381d50 0%, transparent 50%),
+        linear-gradient(180deg, #080b20, #11142f 55%, #101b35);
+}
+
+.stars {
+    position: fixed;
+    inset: 0;
+    z-index: -4;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle var(--duration) ease-in-out infinite;
+    animation-delay: var(--delay);
+    opacity: 0.4;
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0.2;
+        transform: scale(0.7);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.4);
+    }
+}
+
+/* SHOOTING STARS */
+
+.shooting-star {
+    position: fixed;
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, white, transparent);
+    transform: rotate(-35deg);
+    opacity: 0;
+    z-index: -3;
+    animation: shooting 5s linear infinite;
+}
+
+@keyframes shooting {
+    0% {
+        transform: translate(0, 0) rotate(-35deg);
+        opacity: 0;
+    }
+    5% { opacity: 1; }
+    20% {
+        transform: translate(-350px, 250px) rotate(-35deg);
+        opacity: 0;
+    }
+    100% { opacity: 0; }
+}
+
+/* FLOATING HEARTS */
+
+.heart {
+    position: fixed;
+    bottom: -50px;
+    z-index: -2;
+    pointer-events: none;
+    animation: floatHeart linear infinite;
+    opacity: 0;
+    filter: drop-shadow(0 0 8px #ff91c8);
+}
+
+@keyframes floatHeart {
+    0% {
+        transform: translateY(0) rotate(0deg) scale(0.7);
+        opacity: 0;
+    }
+    15% { opacity: 0.7; }
+    85% { opacity: 0.5; }
+    100% {
+        transform: translateY(-110vh) rotate(360deg) scale(1.2);
+        opacity: 0;
+    }
+}
+
+/* =====================================
+   HERO SECTION
+===================================== */
+
+.hero {
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 70px 20px 160px;
+    position: relative;
+}
+
+.top-label {
+    color: var(--pink);
+    letter-spacing: 4px;
+    font-size: 11px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    animation: fadeUp 1.5s ease both;
+}
+
+.hero h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(60px, 12vw, 125px);
+    line-height: 1.2;
+    font-weight: 400;
+    color: #ffe1f1;
+    text-shadow: 0 0 20px #ff8fc777, 0 0 50px #b88aff55;
+    animation: fadeUp 1.5s ease both;
+}
+
+.hero h1 span {
+    display: block;
+    color: #ffadd7;
+}
+
+.hero-subtitle {
+    max-width: 550px;
+    margin: 25px auto;
+    font-size: clamp(14px, 3vw, 18px);
+    line-height: 2;
+    color: #ded9f7;
+    animation: fadeUp 2s ease both;
+}
+
+.hero-turtle {
+    font-size: clamp(45px, 8vw, 75px);
+    margin: 25px 0 10px;
+    display: inline-block;
+    animation: turtleFloat 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 15px #8be5ff77);
+}
+
+@keyframes turtleFloat {
+    0%, 100% { transform: translateY(0) rotate(-5deg); }
+    50% { transform: translateY(-15px) rotate(5deg); }
+}
+
+/* BUTTONS */
+
+.magic-button,
+.game-button {
+    border: 1px solid #ffc6e4;
+    padding: 15px 32px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #ff9bc9, #bca5ff);
+    color: #271631;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 0 25px #ff8fc755;
+    transition: 0.3s ease;
+    margin-top: 20px;
+}
+
+.magic-button:hover,
+.game-button:hover {
+    transform: translateY(-5px) scale(1.04);
+    box-shadow: 0 0 40px #ff8fc799;
+}
+
+/* =====================================
+   OCEAN
+===================================== */
+
+.ocean {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    background: linear-gradient(180deg, #203a64, #101d43);
+    opacity: 0.85;
+}
+
+.wave {
+    position: absolute;
+    top: -45px;
+    left: -50%;
+    width: 200%;
+    height: 100px;
+    border-radius: 42%;
+    background: #8bcfff;
+    opacity: 0.22;
+    animation: waveMove 12s linear infinite;
+}
+
+.wave:nth-child(2) {
+    top: -35px;
+    background: #d1aaff;
+    opacity: 0.2;
+    animation-duration: 17s;
+    animation-direction: reverse;
+}
+
+.wave:nth-child(3) {
+    top: -25px;
+    background: #ffb6d5;
+    opacity: 0.15;
+    animation-duration: 20s;
+}
+
+@keyframes waveMove {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* =====================================
+   GENERAL SECTIONS
+===================================== */
+
+.section {
+    position: relative;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(45px, 8vw, 75px);
+    color: #ffc2e0;
+    font-weight: 400;
+    margin-bottom: 25px;
+    text-shadow: 0 0 25px #ff9fce55;
+}
+
+.section-intro {
+    max-width: 620px;
+    margin: 0 auto 45px;
+    color: #d6d2ed;
+    line-height: 2;
+    font-size: 15px;
+}
+
+/* =====================================
+   QUOTE CARDS
+===================================== */
+
+.quote-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+    gap: 22px;
+    max-width: 950px;
+    margin: auto;
+}
+
+.quote-card {
+    background: linear-gradient(145deg, #ffffff10, #ffffff05);
+    border: 1px solid #ffffff20;
+    border-radius: 25px;
+    padding: 35px 25px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 40px #00000020;
+    transition: transform 0.4s, border-color 0.4s;
+}
+
+.quote-card:hover {
+    transform: translateY(-8px);
+    border-color: #ffadd788;
+}
+
+.quote-icon {
+    font-size: 32px;
+    margin-bottom: 18px;
+}
+
+.quote-card p {
+    font-size: 15px;
+    line-height: 1.9;
+    color: #f0eaff;
+}
+
+.quote-card small {
+    display: block;
+    color: #ffb9db;
+    margin-top: 20px;
+    letter-spacing: 1px;
+}
+
+/* =====================================
+   LOVE LETTER
+===================================== */
+
+.letter-wrap {
+    max-width: 680px;
+    margin: auto;
+    padding: 20px;
+}
+
+.letter {
+    background: linear-gradient(135deg, #fff0f8, #eee6ff);
+    color: #503c68;
+    padding: clamp(30px, 7vw, 60px);
+    border-radius: 8px 8px 25px 25px;
+    box-shadow: 0 20px 80px #00000044;
+    transform: rotate(-1deg);
+    position: relative;
+}
+
+.letter::before {
+    content: '♡';
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 28px;
+    color: #eaa0c9;
+}
+
+.letter h3 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 42px;
+    font-weight: 400;
+    margin-bottom: 25px;
+    color: #a15d9a;
+}
+
+.letter p {
+    font-size: 15px;
+    line-height: 2.1;
+    margin-bottom: 18px;
+}
+
+.signature {
+    font-family: 'Great Vibes', cursive;
+    font-size: 35px;
+    color: #b66ba8;
+    text-align: right;
+    margin-top: 30px;
+    line-height: 1.6;
+}
+
+/* =====================================
+   TURTLE SCENE
+===================================== */
+
+.turtle-scene {
+    padding: 50px 20px 80px;
+    text-align: center;
+}
+
+.turtle-pair {
+    font-size: clamp(50px, 9vw, 85px);
+    display: inline-block;
+    animation: turtleFloat 4s ease-in-out infinite;
+}
+
+.turtle-caption {
+    color: #b9e6ff;
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 2;
+}
+
+/* =====================================
+   LOVE ARCADE
+===================================== */
+
+.love-arcade {
+    padding: 90px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.game-container {
+    max-width: 850px;
+    margin: 35px auto;
+    padding: 30px;
+    border: 1px solid #ffffff25;
+    border-radius: 28px;
+    background: linear-gradient(145deg, #ffffff12, #ffffff05);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 15px 50px #00000025;
+}
+
+.game-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 38px;
+    color: #ffb6d5;
+    margin-bottom: 12px;
+}
+
+.game-description {
+    color: #ded9f7;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.game-score {
+    font-size: 18px;
+    color: #ffc2e0;
+    font-weight: 700;
+    margin: 15px;
+}
+
+.game-button {
+    padding: 12px 25px;
+    margin: 8px;
+}
+
+/* CATCH HEARTS */
+
+.heart-game {
+    height: 300px;
+    max-width: 600px;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    border: 1px solid #ffb6d555;
+    background: radial-gradient(ellipse at bottom, #35234f, #11132d);
+    touch-action: manipulation;
+}
+
+.falling-heart {
+    position: absolute;
+    top: -50px;
+    font-size: 32px;
+    cursor: pointer;
+    user-select: none;
+    animation: heartDrop 4s linear forwards;
+    filter: drop-shadow(0 0 8px #ff9bc9);
+    z-index: 2;
+}
+
+@keyframes heartDrop {
+    from { transform: translateY(0) rotate(0deg); }
+    to { transform: translateY(370px) rotate(360deg); }
+}
+
+/* MEMORY GAME */
+
+.memory-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    max-width: 440px;
+    margin: 25px auto;
+}
+
+.memory-card {
+    aspect-ratio: 1;
+    border: 1px solid #ffb6d566;
+    border-radius: 17px;
+    background: linear-gradient(145deg, #40305f, #1b2345);
+    color: transparent;
+    font-size: clamp(25px, 6vw, 40px);
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    touch-action: manipulation;
+}
+
+.memory-card:hover {
+    transform: scale(1.05);
+}
+
+.memory-card.flipped,
+.memory-card.matched {
+    background: linear-gradient(135deg, #ffe0ef, #e3d5ff);
+    color: #6b426c;
+}
+
+.memory-card.matched {
+    border-color: #ffb6d5;
+    box-shadow: 0 0 15px #ffb6d566;
+}
+
+/* LOVE QUIZ */
+
+.quiz-question {
+    color: #ffe3f2;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.7;
+    margin: 20px 0;
+}
+
+.quiz-options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    max-width: 500px;
+    margin: auto;
+}
+
+.quiz-option {
+    padding: 16px 10px;
+    border: 1px solid #ffb6d566;
+    border-radius: 16px;
+    background: #ffffff10;
+    color: #fff0fa;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.quiz-option:hover {
+    background: #ffb6d533;
+    transform: translateY(-3px);
+}
+
+.quiz-option:disabled {
+    cursor: default;
+    opacity: 0.65;
+}
+
+.quiz-feedback {
+    min-height: 55px;
+    color: #ffb6d5;
+    margin: 20px 0;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+/* =====================================
+   FOOTER AND CONFETTI
+===================================== */
+
+footer {
+    padding: 35px 20px;
+    text-align: center;
+    color: #b9b1d5;
+    font-size: 12px;
+    letter-spacing: 1px;
+    border-top: 1px solid #ffffff10;
+}
+
+footer span {
+    color: #ff9fcf;
+}
+
+.confetti {
+    position: fixed;
+    top: -20px;
+    z-index: 100;
+    pointer-events: none;
+    animation: confettiFall var(--fall-time) linear forwards;
+}
+
+@keyframes confettiFall {
+    0% {
+        transform: translateY(-10px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(110vh) rotate(900deg);
+        opacity: 0;
+    }
+}
+
+/* ENTRANCE ANIMATION */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 600px) {
+
+    .hero {
+        padding-top: 50px;
+        padding-bottom: 140px;
+    }
+
+    .hero-subtitle {
+        max-width: 340px;
+    }
+
+    .section {
+        padding: 75px 18px;
+    }
+
+    .quote-card {
+        padding: 28px 22px;
+    }
+
+    .ocean {
+        height: 110px;
+    }
+
+    .letter {
+        transform: none;
+    }
+
+    .game-container {
+        padding: 20px 14px;
+    }
+
+    .memory-grid {
+        gap: 8px;
+    }
+
+    .memory-card {
+        border-radius: 12px;
+    }
+
+    .quiz-options {
+        grid-template-columns: 1fr;
+    }
+
+    .heart-game {
+        height: 270px;
+    }
+}
+
+/* REDUCED MOTION ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- GALAXY BACKGROUND -->
+
+<div class="galaxy"></div>
+<div class="stars" id="stars"></div>
+
+<div class="shooting-star" style="top:15%; right:5%; animation-delay:2s;"></div>
+<div class="shooting-star" style="top:45%; right:15%; animation-delay:7s;"></div>
+<div class="shooting-star" style="top:70%; right:0%; animation-delay:12s;"></div>
+
+<!-- =====================================
+     HERO
+===================================== -->
+
+<header class="hero">
+
+    <div class="top-label">
+        ✦ A little universe made just for you ✦
+    </div>
+
+    <h1>
+        Happy
+        <span>Boyfriend's Day, Abhinav!</span>
+    </h1>
+
+    <p class="hero-subtitle">
+        To my favourite person in this entire universe,
+        Abhinav, you make ordinary days feel like little
+        pieces of magic. I'm so glad I found you.
+        Today, the stars are shining a little brighter
+        just for you. ♡
+    </p>
+
+    <div class="hero-turtle">🐢💗</div>
+
+    <button class="magic-button" onclick="celebrate()">
+        Click for a little magic ✨
+    </button>
+
+    <div class="ocean">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+
+</header>
+
+<!-- =====================================
+     QUOTES
+===================================== -->
+
+<section class="section">
+
+    <h2 class="section-title">Little things I adore ♡</h2>
+
+    <p class="section-intro">
+        Some feelings are too beautiful for ordinary words,
+        so here's a little collection of thoughts for you.
+    </p>
+
+    <div class="quote-grid">
+
+        <div class="quote-card">
+            <div class="quote-icon">🌙</div>
+            <p>
+                "If I could make one wish upon every star,
+                it would be to keep finding beautiful moments
+                with you."
+            </p>
+            <small>— A wish from my heart</small>
+        </div>
+
+        <div class="quote-card">
+            <div class="quote-icon">🪐</div>
+            <p>
+                "In a universe full of endless possibilities,
+                I'm grateful that our paths crossed."
+            </p>
+            <small>— Written in the stars</small>
+        </div>
+
+        <div class="quote-card">
+            <div class="quote-icon">🌊</div>
+            <p>
+                "Like the ocean meets the shore,
+                may our days always find their way
+                back to beautiful little moments."
+            </p>
+            <small>— An ocean of affection</small>
+        </div>
+
+        <div class="quote-card">
+            <div class="quote-icon">🦋</div>
+            <p>
+                "You bring a kind of happiness that feels
+                like sunshine after a long, rainy day."
+            </p>
+            <small>— Just because</small>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+     LOVE LETTER
+===================================== -->
+
+<section class="section">
+
+    <h2 class="section-title">A little letter for you 💌</h2>
+
+    <div class="letter-wrap">
+
+        <div class="letter">
+
+            <h3>My dearest Abhinav, ♡</h3>
+
+            <p>
+                Happy Boyfriend's Day, my favourite human! 💗
+            </p>
+
+            <p>
+                I honestly don't know how to put all my feelings
+                into words, but I hope you know how incredibly
+                special you are to me.
+            </p>
+
+            <p>
+                I'm so, so glad I found you, Abhinav.
+                Out of all the people in this huge universe,
+                somehow our paths crossed, and that's something
+                I'll always be grateful for.
+            </p>
+
+            <p>
+                Thank you for the laughter, the little moments,
+                the silly conversations, and all the happiness
+                you bring into my days. Even the simplest moments
+                feel special when they're connected to you.
+            </p>
+
+            <p>
+                I hope life gives you countless reasons to smile,
+                dreams that come true, and adventures that make
+                your heart feel full. I hope you never forget
+                how wonderful you are and how much you deserve
+                all the beautiful things this world has to offer.
+            </p>
+
+            <p>
+                No matter how big the universe is, I hope you
+                always remember that someone is cheering for you,
+                believing in you, and wishing you nothing but
+                happiness.
+            </p>
+
+            <p>
+                If I could make a thousand wishes upon a thousand
+                stars, I would still wish for the same thing:
+                more beautiful moments, more laughter, and more
+                memories with you.
+            </p>
+
+            <p>
+                I'm genuinely so happy that you're a part of
+                my life. Thank you for being you.
+            </p>
+
+            <p>
+                I love you so much, Abhinav.
+                More than these little words could ever explain. ♡
+            </p>
+
+            <p>
+                Keep shining, my favourite star.
+                The world is a little more magical with you in it. ✨
+            </p>
+
+            <div class="signature">
+                Lots of lovee from the one and only,<br>
+                Ashika 😎💗
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+     TURTLE SCENE
+===================================== -->
+
+<section class="turtle-scene">
+
+    <div class="turtle-pair">🐢 🐢</div>
+
+    <h2 class="section-title" style="margin-top:20px;">
+        Slow days, sweet moments
+    </h2>
+
+    <p class="turtle-caption">
+        Just two little turtles floating through a big,
+        beautiful ocean. No rush, no worries,
+        just enjoying the journey. 🌊
+    </p>
+
+</section>
+
+<!-- =====================================
+     LOVE ARCADE
+===================================== -->
+
+<section class="love-arcade">
+
+    <h2 class="section-title">
+        A little love arcade ♡
+    </h2>
+
+    <p class="section-intro">
+        Hey Abhinav! 🐢🐱
+        Ready to play some tiny games made with
+        a whole lot of love?
+        Let's see how many hearts you can collect! 💗
+    </p>
+
+    <!-- GAME 1: CATCH HEARTS -->
+
+    <div class="game-container">
+
+        <h3 class="game-title">Catch My Hearts 💗</h3>
+
+        <p class="game-description">
+            Catch as many falling hearts as you can
+            before the timer runs out!
+            Every heart is a little virtual hug from Ashika.
+        </p>
+
+        <div class="game-score">
+            Score: <span id="heartScore">0</span>
+            &nbsp; | &nbsp;
+            Time: <span id="heartTime">20</span>s
+        </div>
+
+        <div class="heart-game" id="heartGame">
+
+            <div id="heartHint" style="
+                position:absolute;
+                top:45%;
+                width:100%;
+                color:#ffffff88;
+                font-size:14px;
+                pointer-events:none;
+            ">
+                Tap start and catch the hearts! ♡
+            </div>
+
+        </div>
+
+        <button class="game-button" onclick="startHeartGame()">
+            Start catching! 💗
+        </button>
+
+        <p class="quiz-feedback" id="heartResult"></p>
+
+    </div>
+
+    <!-- GAME 2: MEMORY GAME -->
+
+    <div class="game-container">
+
+        <h3 class="game-title">Find the Hidden Love 🐱</h3>
+
+        <p class="game-description">
+            Flip the cards and find all the matching pairs.
+            Can you uncover all the cute little surprises?
+        </p>
+
+        <div class="game-score">
+            Matches: <span id="matchScore">0</span> / 8
+        </div>
+
+        <div class="memory-grid" id="memoryGrid"></div>
+
+        <button class="game-button" onclick="startMemoryGame()">
+            Play again 🔄
+        </button>
+
+        <p class="quiz-feedback" id="memoryResult"></p>
+
+    </div>
+
+    <!-- GAME 3: LOVE QUIZ -->
+
+    <div class="game-container">
+
+        <h3 class="game-title">A Little Love Quiz 💌</h3>
+
+        <p class="game-description">
+            A few cute questions for my favourite person.
+            Let's see what you choose!
+        </p>
+
+        <div class="quiz-question" id="quizQuestion">
+            Ready, Abhinav? ♡
+        </div>
+
+        <div class="quiz-options" id="quizOptions"></div>
+
+        <p class="quiz-feedback" id="quizFeedback"></p>
+
+        <button class="game-button" onclick="startQuiz()">
+            Start the quiz ✨
+        </button>
+
+    </div>
+
+    <div style="
+        font-size:50px;
+        margin-top:35px;
+        animation:turtleFloat 3s ease-in-out infinite;
+    ">
+        🐢 💗 🐱
+    </div>
+
+    <p class="turtle-caption">
+        Three little hearts, two cute animals,
+        and one very special person. ♡
+    </p>
+
+</section>
+
+<!-- =====================================
+     FINAL MESSAGE
+===================================== -->
+
+<section class="section">
+
+    <h2 class="section-title">
+        And finally, Abhinav... ♡
+    </h2>
+
+    <p class="section-intro">
+
+        If the stars could write a message,
+        the moon could send a hug,
+        and the ocean could whisper a wish,
+        they would all say the same thing...
+
+        <br><br>
+
+        <strong style="color:#ffb6d5; font-size:20px;">
+            I'm so glad I found you.
+            I love you so much, Abhinav.
+            You are loved, you are cherished,
+            and you deserve all the magic in the world. ♡
+        </strong>
+
+        <br><br>
+
+        Forever sending you love, stardust,
+        and the biggest virtual hug. 🐢💗
+
+    </p>
+
+    <button class="magic-button" onclick="celebrate()">
+        A million hearts for you! 💗
+    </button>
+
+    <p style="
+        margin-top:45px;
+        font-family:'Great Vibes',cursive;
+        font-size:clamp(30px,6vw,48px);
+        color:#ffc2e0;
+        line-height:1.5;
+    ">
+        Lots of lovee from the one and only,<br>
+        Ashika 😎
+    </p>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+    Made with <span>♡</span>, stardust, and a little bit of magic.
+    <br><br>
+    Happy Boyfriend's Day, Abhinav! ✨
+    <br>
+    Forever your biggest cheerleader, Ashika. 💗
+</footer>
+
+<!-- =====================================
+     JAVASCRIPT
+===================================== -->
+
+<script>
+
+/* RANDOM STARS */
+
+const starsContainer = document.getElementById('stars');
+
+for (let i = 0; i < 150; i++) {
+
+    const star = document.createElement('div');
+    star.className = 'star';
+
+    const size = Math.random() * 3 + 1;
+
+    star.style.width = size + 'px';
+    star.style.height = size + 'px';
+    star.style.left = Math.random() * 100 + '%';
+    star.style.top = Math.random() * 100 + '%';
+
+    star.style.setProperty(
+        '--duration',
+        (2 + Math.random() * 4) + 's'
+    );
+
+    star.style.setProperty(
+        '--delay',
+        (Math.random() * 5) + 's'
+    );
+
+    starsContainer.appendChild(star);
+}
+
+/* FLOATING HEARTS */
+
+const heartSymbols = ['♡', '💗', '💕', '♥', '💖', '✧'];
+
+function createHeart() {
+
+    const heart = document.createElement('div');
+    heart.className = 'heart';
+
+    heart.textContent =
+        heartSymbols[Math.floor(Math.random() * heartSymbols.length)];
+
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.fontSize = (15 + Math.random() * 22) + 'px';
+    heart.style.animationDuration = (9 + Math.random() * 12) + 's';
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 22000);
+}
+
+setInterval(createHeart, 650);
+
+/* CONFETTI CELEBRATION */
+
+function celebrate() {
+
+    const pieces = [
+        '💗', '💖', '💕', '✨', '🌸',
+        '🎀', '⭐', '🦋', '♡', '💫'
+    ];
+
+    for (let i = 0; i < 120; i++) {
+
+        setTimeout(() => {
+
+            const piece = document.createElement('div');
+            piece.className = 'confetti';
+
+            piece.textContent =
+                pieces[Math.floor(Math.random() * pieces.length)];
+
+            piece.style.left = Math.random() * 100 + 'vw';
+            piece.style.fontSize = (15 + Math.random() * 22) + 'px';
+
+            piece.style.setProperty(
+                '--fall-time',
+                (2.5 + Math.random() * 3) + 's'
+            );
+
+            document.body.appendChild(piece);
+
+            setTimeout(() => piece.remove(), 6000);
+
+        }, i * 18);
+    }
+}
+
+/* =====================================
+   GAME 1: CATCH MY HEARTS
+===================================== */
+
+let heartScore = 0;
+let heartTime = 20;
+let heartInterval;
+let heartSpawner;
+let heartPlaying = false;
+
+function startHeartGame() {
+
+    clearInterval(heartInterval);
+    clearInterval(heartSpawner);
+
+    const game = document.getElementById('heartGame');
+
+    game.querySelectorAll('.falling-heart').forEach(
+        heart => heart.remove()
+    );
+
+    document.getElementById('heartHint').style.display = 'none';
+
+    heartScore = 0;
+    heartTime = 20;
+    heartPlaying = true;
+
+    document.getElementById('heartScore').textContent = heartScore;
+    document.getElementById('heartTime').textContent = heartTime;
+
+    document.getElementById('heartResult').textContent =
+        'Catch those hearts, Abhinav! 💗';
+
+    heartSpawner = setInterval(() => {
+
+        if (!heartPlaying) return;
+
+        const heart = document.createElement('div');
+
+        heart.className = 'falling-heart';
+
+        const symbols = ['💗', '💖', '💕', '💘', '❤️'];
+
+        heart.textContent =
+            symbols[Math.floor(Math.random() * symbols.length)];
+
+        heart.style.left =
+            Math.random() * Math.max(0, game.clientWidth - 45) + 'px';
+
+        heart.style.animationDuration =
+            (2.5 + Math.random() * 1.5) + 's';
+
+        heart.addEventListener('pointerdown', () => {
+
+            if (!heartPlaying || heart.dataset.caught) return;
+
+            heart.dataset.caught = 'true';
+
+            heartScore++;
+
+            document.getElementById('heartScore').textContent =
+                heartScore;
+
+            heart.remove();
+
+        });
+
+        game.appendChild(heart);
+
+        setTimeout(() => heart.remove(), 4500);
+
+    }, 450);
+
+    heartInterval = setInterval(() => {
+
+        heartTime--;
+
+        document.getElementById('heartTime').textContent = heartTime;
+
+        if (heartTime <= 0) {
+
+            clearInterval(heartInterval);
+            clearInterval(heartSpawner);
+
+            heartPlaying = false;
+
+            game.querySelectorAll('.falling-heart').forEach(
+                heart => heart.remove()
+            );
+
+            document.getElementById('heartResult').textContent =
+                `You collected ${heartScore} hearts! ` +
+                'Every single one comes with a hug from Ashika. 🥹💗';
+
+            celebrate();
+        }
+
+    }, 1000);
+}
+
+/* =====================================
+   GAME 2: MEMORY MATCH
+===================================== */
+
+const memorySymbols = [
+    '🐢', '🐱', '💗', '🌙',
+    '🦋', '🌸', '⭐', '🪐'
+];
+
+let memoryCards = [];
+let flippedCards = [];
+let matchedPairs = 0;
+let memoryLocked = false;
+let memoryTurn = 0;
+
+function startMemoryGame() {
+
+    const grid = document.getElementById('memoryGrid');
+
+    grid.innerHTML = '';
+
+    memoryCards = [...memorySymbols, ...memorySymbols]
+        .sort(() => Math.random() - 0.5);
+
+    flippedCards = [];
+    matchedPairs = 0;
+    memoryLocked = false;
+    memoryTurn++;
+
+    const currentTurn = memoryTurn;
+
+    document.getElementById('matchScore').textContent = '0';
+
+    document.getElementById('memoryResult').textContent =
+        'Find all the matching pairs! 🐢';
+
+    memoryCards.forEach(symbol => {
+
+        const card = document.createElement('button');
+
+        card.className = 'memory-card';
+        card.textContent = '♡';
+        card.setAttribute('aria-label', 'Hidden card');
+
+        card.addEventListener('click', () => {
+
+            if (
+                memoryLocked ||
+                card.classList.contains('flipped') ||
+                card.classList.contains('matched')
+            ) {
+                return;
+            }
+
+            card.textContent = symbol;
+            card.classList.add('flipped');
+
+            flippedCards.push({
+                card: card,
+                symbol: symbol
+            });
+
+            if (flippedCards.length === 2) {
+
+                memoryLocked = true;
+
+                const [first, second] = flippedCards;
+
+                if (first.symbol === second.symbol) {
+
+                    first.card.classList.add('matched');
+                    second.card.classList.add('matched');
+
+                    matchedPairs++;
+
+                    document.getElementById('matchScore').textContent =
+                        matchedPairs;
+
+                    flippedCards = [];
+                    memoryLocked = false;
+
+                    if (matchedPairs === memorySymbols.length) {
+
+                        document.getElementById('memoryResult').textContent =
+                            'Yay! You found every pair! ' +
+                            'You deserve a million hugs, Abhinav! 💗';
+
+                        celebrate();
+                    }
+
+                } else {
+
+                    setTimeout(() => {
+
+                        if (currentTurn !== memoryTurn) return;
+
+                        first.card.textContent = '♡';
+                        second.card.textContent = '♡';
+
+                        first.card.classList.remove('flipped');
+                        second.card.classList.remove('flipped');
+
+                        flippedCards = [];
+                        memoryLocked = false;
+
+                    }, 850);
+                }
+            }
+        });
+
+        grid.appendChild(card);
+    });
+}
+
+startMemoryGame();
+
+/* =====================================
+   GAME 3: LOVE QUIZ
+===================================== */
+
+const loveQuestions = [
+
+    {
+        question: 'Who is the cutest person in this universe? 🐱',
+        options: [
+            'Abhinav',
+            'A little cat',
+            'A baby turtle',
+            'Obviously Abhinav!'
+        ],
+        answer: 3,
+        feedback: 'Correct! Especially according to Ashika. 💗'
+    },
+
+    {
+        question: 'What does Ashika send you in this little galaxy?',
+        options: [
+            'A million hearts',
+            'A sleepy turtle',
+            'A magical star',
+            'All of the above!'
+        ],
+        answer: 3,
+        feedback: 'Exactly! A whole universe of love for you. 🌙'
+    },
+
+    {
+        question: 'What is the sweetest thing about finding someone special?',
+        options: [
+            'The little moments',
+            'The laughter',
+            'The memories',
+            'All of these!'
+        ],
+        answer: 3,
+        feedback: 'Every little moment matters. ♡'
+    },
+
+    {
+        question: 'What is Ashika especially glad about?',
+        options: [
+            'Finding a new star',
+            'Finding you, Abhinav',
+            'Finding a turtle',
+            'Finding a cat'
+        ],
+        answer: 1,
+        feedback: 'Yes! She is so glad she found you. 🥹💗'
+    },
+
+    {
+        question: 'What is the final message of this website?',
+        options: [
+            'Keep shining',
+            'You are loved',
+            'You are cherished',
+            'All of the above!'
+        ],
+        answer: 3,
+        feedback: 'You deserve all the magic in the world! ✨'
+    }
+
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let quizStarted = false;
+
+function startQuiz() {
+
+    quizIndex = 0;
+    quizScore = 0;
+    quizStarted = true;
+
+    showQuestion();
+}
+
+function showQuestion() {
+
+    const questionElement =
+        document.getElementById('quizQuestion');
+
+    const optionsElement =
+        document.getElementById('quizOptions');
+
+    const feedbackElement =
+        document.getElementById('quizFeedback');
+
+    if (quizIndex >= loveQuestions.length) {
+
+        questionElement.textContent = 'You finished the quiz! 💗';
+
+        optionsElement.innerHTML = '';
+
+        feedbackElement.innerHTML =
+            `You got ${quizScore} out of ${loveQuestions.length} correct!` +
+            '<br><br>' +
+            'But here is the real answer:' +
+            '<br>' +
+            '<strong>Abhinav, you are loved so, so much. ♡</strong>' +
+            '<br><br>' +
+            'Lots of lovee from the one and only, Ashika 😎';
+
+        celebrate();
+
+        quizStarted = false;
+
+        return;
+    }
+
+    const current = loveQuestions[quizIndex];
+
+    questionElement.textContent =
+        `${quizIndex + 1}. ${current.question}`;
+
+    optionsElement.innerHTML = '';
+    feedbackElement.textContent = '';
+
+    current.options.forEach((option, index) => {
+
+        const button = document.createElement('button');
+
+        button.className = 'quiz-option';
+        button.textContent = option;
+
+        button.addEventListener('click', () => {
+
+            if (!quizStarted) return;
+
+            const buttons =
+                optionsElement.querySelectorAll('button');
+
+            buttons.forEach(btn => btn.disabled = true);
+
+            if (index === current.answer) {
+
+                quizScore++;
+
+                feedbackElement.textContent =
+                    '♡ ' + current.feedback;
+
+            } else {
+
+                feedbackElement.textContent =
+                    'Aww, the correct answer is: ' +
+                    current.options[current.answer] + ' 💗';
+            }
+
+            const nextButton = document.createElement('button');
+
+            nextButton.className = 'game-button';
+
+            nextButton.textContent =
+                quizIndex === loveQuestions.length - 1
+                ? 'See my result 💌'
+                : 'Next question →';
+
+            nextButton.addEventListener('click', () => {
+
+                quizIndex++;
+                showQuestion();
+
+            });
+
+            optionsElement.appendChild(nextButton);
+
+        });
+
+        optionsElement.appendChild(button);
+
+    });
+}
+
+</script>
+
+</body>
+</html>
